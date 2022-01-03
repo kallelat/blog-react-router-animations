@@ -1,0 +1,40 @@
+/* this is the initial state for entering component, direction right */
+.slide-enter.right {
+  transform: translateX(100%);
+}
+
+/* this is the initial state for entering component, direction left */
+.slide-enter.left {
+  transform: translateX(-100%);
+}
+
+/* this is the initial state for exiting component */
+.slide-exit.right,
+.slide-exit.left {
+  transform: translateX(0);
+}
+
+/* this is the state entering component will have at the end of the animation */
+.slide-enter-active.right,
+.slide-enter-active.left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* this is the state exiting component will have at the end of the animation, direction right */
+.slide-exit-active.right {
+  transform: translateX(-100%);
+}
+
+/* this is the state exiting component will have at the end of the animation, direction left */
+.slide-exit-active.left {
+  transform: translateX(100%);
+}
+
+/* common rule, usually used for defining css transition rules
+    NOTE: if you want to make the animation smooth, the transition-delay should same as with <CSSTransition /> component
+*/
+.slide-enter,
+.slide-exit {
+  transition: transform 1000ms;
+}

@@ -1,9 +1,19 @@
-import React from "react";
+import React, { FunctionComponent, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./slide.css";
+import "./slide-animation.css";
+
+export type Direction = "left" | "right";
+
+interface SlideProps {
+  direction: Direction;
+  onChange: (direction: Direction) => void;
+}
 
 // a generic Slide component to implement navigation and layout for a single slide
-const Slide = () => {
+const Slide: FunctionComponent<SlideProps> = ({ direction, onChange }) => {
+  const [internalDirection, toggleInternalDirection] = useState(direction);
+
   // navigate hook to enabled navigation
   const navigate = useNavigate();
 
@@ -14,11 +24,14 @@ const Slide = () => {
 
   // an utility function to trigger navigation
   const gotoSlide = (toSlide: number) => {
+    const newDirection = toSlide > currentSlide ? "right" : "left";
+    onChange(newDirection);
+    toggleInternalDirection(newDirection);
     navigate(`/slides/${toSlide}`);
   };
 
   return (
-    <div className="slide">
+    <div className={`slide ${internalDirection}`} custom-number={currentSlide}>
       {/* a button to go to previous slide */}
       <button
         disabled={currentSlide === 1}
