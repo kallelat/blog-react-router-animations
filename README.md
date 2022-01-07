@@ -1,4 +1,4 @@
-# How to add animations with React route page changes Router
+# How to add transition animations to React page changes
 
 In this article I'm showing how to add a simple transition animation to React route page changes.
 
