@@ -1,6 +1,6 @@
-# How to use CSS variables with React
+# How to add animations with React Router
 
-This article demonstrates usage of CSS variables in a simple React app. It won't be covering advanced use cases, but hopefully a simple and short explanation on how and when to use CSS variables.
+In this article I'm showing how to add a simple transition animation to React route page changes.
 
 Technologies used:
 
