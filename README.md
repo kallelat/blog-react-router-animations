@@ -10,7 +10,7 @@ Technologies used:
 
 ## Initial setup and configuration
 
-1. Create a new React app with `npm create-react-app . --template typescript`
+1. Create a new React app with `npx create-react-app . --template typescript`
 2. Install requires packages `npm install react-router-dom react-transition-group --save`
 3. Install type definitions `npm install @types/react-transition-group --save-dev`
 4. Start dev server using `npm start`
