@@ -190,11 +190,13 @@ And finally we need to alter the last route definition a bit:
 After the code changes, we now face a problem - there is two `Slides` rendered at the same time and the result looks a bit wonky. Hence, we need to add these CSS rules to `slide.css` as a fix.
 
 ```css
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 ```
 
 Also, as the transition-group adds a another DOM layer, add this to `slideshow.css`:
