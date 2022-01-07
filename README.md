@@ -54,7 +54,7 @@ The animation flow goes like this:
 
 ### Setup the animation CSS
 
-Add the file `components/slidefix -animation.css` and add there the following content:
+Add the file `components/slide-animation.css` and add there the following content:
 
 ```css
 /* this is the initial state for entering component, direction right */
